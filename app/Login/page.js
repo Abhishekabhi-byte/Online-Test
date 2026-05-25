@@ -11,18 +11,18 @@ export default function LoginPage() {
 
 const students = [
   {
-    id: "raju",
+    id: "student1",
     password: "1234",
   },
 
   {
-    id: "ram",
-    password: "123",
+    id: "student2",
+    password: "5678",
   },
 
   {
     id: "abhishek",
-    password: "8789",
+    password: "9999",
   },
 ];
 
