@@ -1,9 +1,10 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Trophy } from "lucide-react";
 
-export default function ResultPage() {
+function ResultContent() {
   const searchParams = useSearchParams();
 
   const score = searchParams.get("score");
@@ -40,5 +41,13 @@ export default function ResultPage() {
       </div>
 
     </div>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ResultContent />
+    </Suspense>
   );
 }
